@@ -5,10 +5,10 @@
 
             <div class="post__user">
                 <div class="user">
-                    <a href="#" class="user__avatar">
-                        <img :src="data.user.ava" alt="">
-                    </a>
-                    <a href="#" class="user__name">{{ data.user.name }} {{ data.user.surname }}</a>
+                    <router-link :to="`/post/${data.id}/edit`" class="user__avatar">
+                        <img :src="data.user.ava" alt=""/>
+                    </router-link>
+                    <router-link :to="`/post/${data.id}/edit`" class="user__name">{{ data.user.name }} {{ data.user.surname }}</router-link>
                 </div>
 
             </div>
