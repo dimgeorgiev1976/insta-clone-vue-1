@@ -10,16 +10,19 @@
 
 <script>
 import Post from '@/components/Post'
-import fakedata from './../fakedata.json'
 
 export default {
     components: {
         Post
     },
 
-    data() {
-        return {
-            posts: fakedata.posts
+    created () {
+        this.$store.dispatch('downloadPosts')
+    },
+
+    computed: {
+        posts () {
+            return this.$store.state.posts
         }
     }
 }
