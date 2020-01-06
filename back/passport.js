@@ -11,22 +11,6 @@ passport.use(new LocalStrategy((username, password, done) => {
     }
 
     return done(null, false)
-
-    // User.findOne({ username: username }, (err, user) => {
-    //     if (err) {
-    //         return done(err)
-    //     }
-
-    //     if (!user) {
-    //         return done(null, false)
-    //     }
-
-    //     if (!user.verifyPassword(password)) {
-    //         return done(null, false)
-    //     }
-
-    //     return done(null, user)
-    // })
 }))
 
 passport.serializeUser((user, done) => {
@@ -35,7 +19,7 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser((id, done) => {
     id = parseInt(id)
-console.log('deserialize', id)
+    
     const user = database.get('users').find(user => user.id === id)
 
     if (user) {

@@ -16,12 +16,12 @@ export default {
     },
 
     created () {
-        this.$store.dispatch('downloadPosts')
+        this.$store.dispatch('content/loadWall')
     },
 
     computed: {
         posts () {
-            return this.$store.state.posts
+            return this.$store.state.content.posts
         }
     }
 }

@@ -1,29 +1,38 @@
 {
-   "users": [
-       {
-           "id": 1,
-           "name": "Серьгей",
-           "surname": "Марковин",
-           "login": "test1",
-           "password": "test1"
-       }
-   ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Серьгей",
+            "surname": "Марковин",
+            "ava": "/img/avatars/01.png",
+            "login": "test1",
+            "password": "test1"
+        }
+    ],
 
-   "posts": [
-       {
-           "id": 1,
-           "image": "/src/image/001.jpg",
-           "authorId": 1,
-           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
-       }
-   ],
+    "posts": [
+        {
+            "id": 1,
+            "image": "/img/posts/man-in-forest.jpg",
+            "authorId": 1,
+            "tags": ["forest", "travel", "journey", "holiday"],
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
+        },
+        {
+            "id": 2,
+            "image": "/img/posts/girl-pc.jpg",
+            "authorId": 1,
+            "tags": ["forest", "travel", "journey", "holiday"],
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
+        }
+    ],
 
-   "comments": [
-       {
-           "id": 1,
-           "authorId": 1,
-           "postId": 1,
-           "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
-       }
-   ]
+    "comments": [
+        {
+            "id": 1,
+            "authorId": 1,
+            "postId": 1,
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
+        }
+    ]
 }

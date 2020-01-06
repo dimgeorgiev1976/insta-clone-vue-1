@@ -5,7 +5,7 @@ import store from './store'
 
 Vue.config.productionTip = false
 
-store.dispatch('account/continue').then(result => console.log(result))
+store.dispatch('account/continue')
 
 new Vue({
   router,

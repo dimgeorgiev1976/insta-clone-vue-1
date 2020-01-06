@@ -14,7 +14,7 @@
 					i.fas.fa-pencil-alt
 					|					 Edit
 		.post__img
-			img(:src='data.src', alt='Photo')
+			img(:src='data.image', alt='Photo')
 
 		.post__data
 			.post__description {{ data.description }}

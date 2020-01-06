@@ -33,7 +33,7 @@ export default {
                 return true
             }
 
-            const response = await fetch("/account/signin", {
+            const response = await fetch("/api/account/signin", {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json, text/plain, */*',
@@ -61,7 +61,7 @@ export default {
                 return true
             }
 
-            const response = await fetch("/account/continue", {
+            const response = await fetch("/api/account/continue", {
                 method: 'POST'
             })
 
@@ -80,7 +80,7 @@ export default {
                 return true
             }
 
-            fetch("/account/signout", {
+            fetch("/api/account/signout", {
                 method: 'POST'
             })
 
