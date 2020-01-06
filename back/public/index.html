@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ICBack test page</title>
+</head>
+<body>
+    <script>
+main()
+
+async function main () {
+    let result = null
+
+    result = await fetch('http://localhost:3000/account/signin', {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            login: "test1",
+            password: "test1"
+        })
+    }).then(x => x.text())
+
+    console.log(result)
+    
+    result = await fetch('http://localhost:3000/account/continue', {
+        method: "POST"
+    }).then(x => x.text())
+
+    console.log(result)
+}
+    </script>
+</body>
+</html>
