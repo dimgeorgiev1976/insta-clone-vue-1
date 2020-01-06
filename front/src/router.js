@@ -8,6 +8,10 @@ export default new VueRouter({
 
     routes: [
         {
+            path: '/account',
+            component: () => import('@/pages/AccountPage.vue')
+        },
+        {
             path: '/wall',
             component: () => import('@/pages/Wall.vue')
         },

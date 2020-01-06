@@ -23,7 +23,6 @@
 			.post__buttons
 				button.btn.btn--save Сохранить
 				button.btn.btn--cancel Отмена
-
 </template>
 
 <script>

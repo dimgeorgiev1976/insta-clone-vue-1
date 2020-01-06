@@ -9,11 +9,21 @@ router.post("/signin", async (ctx, next) => {
 
     if (user && user.password === password) {
         await ctx.login(user)
-        ctx.body = "Authenticated success."
+
+        ctx.body = {
+            isAuthenticated: true,
+            user: {
+                id: user.id,
+                name: user.name,
+                surname: user.surname
+            }
+        }
     }
 
     else {
-        ctx.body = "Login & password pair doesn't exsist."
+        ctx.body = {
+            isAuthenticated: false
+        }
     }
 })
 

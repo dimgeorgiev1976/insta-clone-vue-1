@@ -10,7 +10,7 @@
                         .search__cancel.search__cancel--active
                             i.fas.fa-times-circle
                 .header__links
-                    a.header__link(href='#')
+                    router-link.header__link(to='/account')
                         i.fas.fa-user
                     a.header__link(href='#')
                         i.fas.fa-paper-plane

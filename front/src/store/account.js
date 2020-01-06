@@ -27,7 +27,7 @@ export default {
     },
 
     actions: {
-        async signin ({ dispatch, state }, data) {
+        async signin ({ commit, state }, data) {
             // Уже авторизован
             if (state.isAuthenticated) {
                 return true
@@ -48,14 +48,14 @@ export default {
             const answer = await response.json()
 
             if (answer.isAuthenticated) {
-                dispatch('signin', answer.user)
+                commit('signin', answer.user)
                 return true
             }
 
             return false
         },
 
-        async continue ({ state, dispatch }) {
+        async continue ({ state, commit }) {
             // Уже авторизован
             if (state.isAuthenticated) {
                 return true
@@ -68,14 +68,14 @@ export default {
             const answer = await response.json()
 
             if (answer.isAuthenticated) {
-                dispatch('signin', answer.user)
+                commit('signin', answer.user)
                 return true
             }
 
             return false
         },
 
-        async signout ({ state, dispatch }) {
+        async signout ({ state, commit }) {
             if (!state.isAuthenticated) {
                 return true
             }
@@ -84,32 +84,9 @@ export default {
                 method: 'POST'
             })
 
-            dispatch('signout')
+            commit('signout')
 
             return true
         }
     }
 }
-
-
-// let result = null
-
-// result = await fetch('http://localhost:3000/account/signin', {
-//     method: "POST",
-//     headers: {
-//         'Accept': 'application/json, text/plain, */*',
-//         'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({
-//         login: "test1",
-//         password: "test1"
-//     })
-// }).then(x => x.text())
-
-// console.log(result)
-
-// result = await fetch('http://localhost:3000/account/continue', {
-//     method: "POST"
-// }).then(x => x.text())
-
-// console.log(result)
