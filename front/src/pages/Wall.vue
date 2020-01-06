@@ -2,7 +2,7 @@
     .container
         post(
             v-for="post of posts"
-            :data="post"
+            :postData="post"
             v-bind:key="post.id"
         )
 </template>

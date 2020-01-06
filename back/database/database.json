@@ -1,7 +1,7 @@
 {
    "postIdCounter": 5,
    "userIdCounter": 2,
-   "commentIdCounter": 2,
+   "commentIdCounter": 7,
    "users": [
       {
          "id": 1,
@@ -58,6 +58,36 @@
          "authorId": 1,
          "postId": 1,
          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
+      },
+      {
+         "id": 2,
+         "authorId": 1,
+         "postId": 4,
+         "content": "asdf"
+      },
+      {
+         "id": 3,
+         "authorId": 1,
+         "postId": 4,
+         "content": "asdf"
+      },
+      {
+         "id": 4,
+         "authorId": 1,
+         "postId": 4,
+         "content": ""
+      },
+      {
+         "id": 5,
+         "authorId": 1,
+         "postId": 4,
+         "content": "Вот мой комментарий"
+      },
+      {
+         "id": 6,
+         "authorId": 1,
+         "postId": 3,
+         "content": "Вот еще один мой комментарий"
       }
    ]
 }

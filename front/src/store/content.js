@@ -72,6 +72,23 @@ export default {
             }).then(x => x.json())
 
             return loader
+        },
+
+        async addComment ({ rootState }, data) {
+            if (!rootState.account || !rootState.account.isAuthenticated) {
+                return false
+            }
+
+            const formData = new FormData
+            formData.append('postId', data.postId)
+            formData.append('comment', data.comment)
+
+            const sender = await fetch('/api/comment/create', {
+                method: "POST",
+                body: formData
+            })
+
+            console.log(sender)
         }
     }
 }
