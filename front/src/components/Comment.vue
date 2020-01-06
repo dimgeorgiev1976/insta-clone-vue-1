@@ -1,15 +1,15 @@
-<template>
-    <div class="post-comment">
-        <a href="#" class="post-comment__avatar">
-            <img :src="data.user.ava" alt="">
-        </a>
-        <div class="post-comment__text">
-            <a href="#" class="post-comment__name">{{ data.user.name }} {{ data.user.surname }}</a> {{ data.content }}</div>
-    </div>
+<template lang="pug">
+	.post-comment
+		a.post-comment__avatar(href='#')
+			img(:src='data.user.ava', alt='')
+		.post-comment__text
+			a.post-comment__name(href='#') {{ data.user.name }} {{ data.user.surname }}
+			|  {{ data.content }}
+
 </template>
 
 <script>
 export default {
-    props: ['data']
+	props: ['data']
 }
 </script>

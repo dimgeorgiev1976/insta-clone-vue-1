@@ -1,73 +1,43 @@
-<template>
-    <div class="post">
+<template lang="pug">
+	.post
+		.post__header
+			.post__user
+				.user
+					router-link.user__avatar(:to='`/post/${data.id}/edit`')
+						img(:src='data.user.ava', alt='')
+					router-link.user__name(:to='`/post/${data.id}/edit`') {{ data.user.name }} {{ data.user.surname }}
+			.post__links
+				a.edit-link(href='#')
+					i.far.fa-trash-alt
+					|					 Delete
+				a.edit-link(href='edit.html')
+					i.fas.fa-pencil-alt
+					|					 Edit
+		.post__img
+			img(:src='data.src', alt='Photo')
 
-        <div class="post__header">
+		.post__data
+			.post__description {{ data.description }}
+			.post__hashtags
+				template(v-for='tag of data.tags')
+					a(href='#', v-bind:key='tag') {{ '#' + tag }}
 
-            <div class="post__user">
-                <div class="user">
-                    <router-link :to="`/post/${data.id}/edit`" class="user__avatar">
-                        <img :src="data.user.ava" alt=""/>
-                    </router-link>
-                    <router-link :to="`/post/${data.id}/edit`" class="user__name">{{ data.user.name }} {{ data.user.surname }}</router-link>
-                </div>
+		.post__comments
+			comment(v-for='comment of data.comments', :data='comment', v-bind:key='comment.id')
 
-            </div>
-
-            <div class="post__links">
-                <a href="#" class="edit-link">
-                    <i class="far fa-trash-alt"></i>
-                    Delete
-                </a>
-
-
-                <a href="edit.html" class="edit-link">
-                    <i class="fas fa-pencil-alt"></i>
-                    Edit
-                </a>
-
-            </div>
-        </div>
-
-        <div class="post__img">
-            <img :src="data.src" alt="Photo">
-        </div>
-
-        <!-- post__data  -->
-        <div class="post__data">
-
-            <div class="post__description">{{ data.description }}</div>
-
-            <div class="post__hashtags">
-                <template v-for="tag of data.tags">
-                    <a href="#" v-bind:key="tag">#{{ tag }}</a>
-                </template>
-            </div>
-        </div>
-        <!-- // post__data -->
-
-        <!-- post__comments -->
-        <div class="post__comments">
-            <Comment v-for="comment of data.comments" :data="comment" v-bind:key="comment.id"></Comment>
-        </div>
-        <!-- // post__comments -->
-
-        <div class="post__comment-form">
-            <div class="comment-form">
-                <textarea class="comment-form__textarea" placeholder="Добавить комментарий"></textarea>
-                <button disabled class="comment-form__button">Опубликовать</button>
-            </div>
-        </div>
-
-    </div>
+		.post__comment-form
+			.comment-form
+				textarea.comment-form__textarea(placeholder='Добавить комментарий')
+				button.comment-form__button(disabled='') Опубликовать
 </template>
 
 <script>
 import Comment from '@/components/Comment'
 
 export default {
-    props: ['data'],
-    components: {
-        Comment
-    }
+	props: ['data'],
+	components: {
+		Comment
+	}
 }
 </script>

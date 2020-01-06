@@ -1,11 +1,10 @@
-<template>
-    <div class="container">
-        <post
+<template lang="pug">
+    .container
+        post(
             v-for="post of posts"
             :data="post"
             v-bind:key="post.id"
-        ></post>
-    </div>
+        )
 </template>
 
 <script>

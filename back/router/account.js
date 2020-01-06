@@ -19,11 +19,22 @@ router.post("/signin", async (ctx, next) => {
 
 router.post("/continue", async (ctx, next) => {
     if (ctx.isAuthenticated()) {
-        ctx.body = 'Continue session success.'
+        const user = ctx.state.user
+
+        ctx.body = {
+            isAuthenticated: true,
+            user: {
+                id: user.id,
+                name: user.name,
+                surname: user.surname
+            }
+        }
     }
 
     else {
-        ctx.body = "Not continue session."
+        ctx.body = {
+            isAuthenticated: false
+        }
     }
 })
 
