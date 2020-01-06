@@ -16,6 +16,10 @@ export default new VueRouter({
             component: () => import('@/pages/Wall.vue')
         },
         {
+            path: '/post/create',
+            component: () => import('@/pages/PostCreator.vue')
+        },
+        {
             path: '/post/:id/edit',
             component: () => import('@/pages/PostEditor.vue')
         },

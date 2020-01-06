@@ -1,6 +1,6 @@
 import bodyParser from 'koa-bodyparser'
 import session from 'koa-session'
-import cors from '@koa/cors'
+import serve from 'koa-static'
 import config from 'config'
 import Koa from 'koa'
 
@@ -12,7 +12,7 @@ const app = new Koa
 app.keys = ['secret']
 
 app
-    .use(cors())
+    .use(serve('./static'))
     .use(bodyParser())
     .use(session({}, app))
     .use(passport.initialize())

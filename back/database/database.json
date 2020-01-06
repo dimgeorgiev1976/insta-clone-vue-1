@@ -1,38 +1,63 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "Серьгей",
-            "surname": "Марковин",
-            "ava": "/img/avatars/01.png",
-            "login": "test1",
-            "password": "test1"
-        }
-    ],
-
-    "posts": [
-        {
-            "id": 1,
-            "image": "/img/posts/man-in-forest.jpg",
-            "authorId": 1,
-            "tags": ["forest", "travel", "journey", "holiday"],
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
-        },
-        {
-            "id": 2,
-            "image": "/img/posts/girl-pc.jpg",
-            "authorId": 1,
-            "tags": ["forest", "travel", "journey", "holiday"],
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
-        }
-    ],
-
-    "comments": [
-        {
-            "id": 1,
-            "authorId": 1,
-            "postId": 1,
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
-        }
-    ]
+   "postIdCounter": 5,
+   "userIdCounter": 2,
+   "commentIdCounter": 2,
+   "users": [
+      {
+         "id": 1,
+         "name": "Серьгей",
+         "surname": "Марковин",
+         "ava": "/images/01.png",
+         "login": "test1",
+         "password": "test1"
+      }
+   ],
+   "posts": [
+      {
+         "id": 1,
+         "image": "/images/man-in-forest.jpg",
+         "authorId": 1,
+         "tags": [
+            "forest",
+            "travel",
+            "journey",
+            "holiday"
+         ],
+         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
+      },
+      {
+         "id": 2,
+         "image": "/images/girl-pc.jpg",
+         "authorId": 1,
+         "tags": [
+            "forest",
+            "travel",
+            "journey",
+            "holiday"
+         ],
+         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
+      },
+      {
+         "id": 3,
+         "authorId": 1,
+         "tags": [],
+         "description": "Тут какое-нибудь описание",
+         "image": "/images/8f45a50d1c5696b8376795d44c2f57ad.png"
+      },
+      {
+         "id": 4,
+         "authorId": 1,
+         "tags": [],
+         "description": "123123",
+         "image": "/images/eb4d1041149540b81b22d177c7413450.png"
+      }
+   ],
+   "comments": [
+      {
+         "id": 1,
+         "authorId": 1,
+         "postId": 1,
+         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, beatae."
+      }
+   ]
 }

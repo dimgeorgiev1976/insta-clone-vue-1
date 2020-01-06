@@ -10,12 +10,11 @@
 							| {{ post.user.name }} {{ post.user.surname }}
 				.post__links
 			.post__img
-				img(src='/img/posts/man-in-forest.jpg', alt='Photo')
+				img(:src='post.image', alt='Photo')
 			.post__edit
 				.post__edit-name Описание:
 				.post__edit-textarea-wrapper
-					textarea.post__edit-textarea
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.
+					textarea.post__edit-textarea(v-model="post.description")
 			.post__edit
 				.post__edit-name Хэштеги:
 				.post__edit-textarea-wrapper
@@ -28,7 +27,7 @@
 <script>
 export default {
 	async created () {
-		this.post = await this.$store.dispatch('getPostById', this.postId)
+		this.post = await this.$store.dispatch('content/getPostById', this.postId)
 	},
 	
 	data () {

@@ -7,6 +7,14 @@ Vue.config.productionTip = false
 
 store.dispatch('account/continue')
 
+Vue.mixin({
+  computed: {
+    isAuthenticated () {
+      return store.state.account.isAuthenticated
+    }
+  }
+})
+
 new Vue({
   router,
   store,

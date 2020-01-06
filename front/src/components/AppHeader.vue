@@ -12,6 +12,6 @@
                 .header__links
                     router-link.header__link(to='/account')
                         i.fas.fa-user
-                    a.header__link(href='#')
+                    router-link.header__link(v-if="isAuthenticated" to='/post/create')
                         i.fas.fa-paper-plane
 </template>

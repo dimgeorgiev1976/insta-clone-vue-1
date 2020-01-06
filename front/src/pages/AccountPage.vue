@@ -2,14 +2,14 @@
 	.container(v-if="isAuthenticated")
 		.post
 			.post__header
-				form
+				form(style="width: 100%")
 					fieldset
 						legend Разлогин
 						button(@click.prevent="signout()") Выйти
 	.container(v-else)
 		.post
 			.post__header
-				form
+				form(style="width: 100%")
 					fieldset
 						legend Авторизация
 						input(type="text" placeholder="login" v-model="user.login")
@@ -55,12 +55,6 @@ export default {
 
 		signout () {
 			this.$store.dispatch('account/signout')
-		}
-	},
-
-	computed: {
-		isAuthenticated () {
-			return this.$store.state.account.isAuthenticated
 		}
 	}
 }
