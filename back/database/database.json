@@ -1,7 +1,7 @@
 {
-   "postIdCounter": 5,
+   "postIdCounter": 6,
    "userIdCounter": 2,
-   "commentIdCounter": 7,
+   "commentIdCounter": 8,
    "users": [
       {
          "id": 1,
@@ -50,6 +50,13 @@
          "tags": [],
          "description": "123123",
          "image": "/images/eb4d1041149540b81b22d177c7413450.png"
+      },
+      {
+         "id": 5,
+         "authorId": 1,
+         "tags": [],
+         "description": "Вот описание",
+         "image": "/images/b3bfe51f8f60d3626539275945dd08b1.jpg"
       }
    ],
    "comments": [
@@ -88,6 +95,12 @@
          "authorId": 1,
          "postId": 3,
          "content": "Вот еще один мой комментарий"
+      },
+      {
+         "id": 7,
+         "authorId": 1,
+         "postId": 4,
+         "content": "1111"
       }
    ]
 }

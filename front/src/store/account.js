@@ -5,7 +5,8 @@ export default {
         isAuthenticated: false,
         user: {
             id: null,
-            name: null
+            name: null,
+            sername: null
         }
     },
 

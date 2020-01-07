@@ -51,7 +51,11 @@ router.post("/continue", async (ctx, next) => {
 router.post("/signout", async (ctx, next) => {
 	if (ctx.isAuthenticated()) {
 		ctx.logout()
-	}
+    }
+    
+    ctx.body = {
+        isAuthenticated: false
+    }
 })
 
 export default router
