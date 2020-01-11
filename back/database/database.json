@@ -1,5 +1,5 @@
 {
-   "postIdCounter": 6,
+   "postIdCounter": 7,
    "userIdCounter": 2,
    "commentIdCounter": 8,
    "users": [
@@ -57,6 +57,13 @@
          "tags": [],
          "description": "Вот описание",
          "image": "/images/b3bfe51f8f60d3626539275945dd08b1.jpg"
+      },
+      {
+         "id": 6,
+         "authorId": 1,
+         "tags": [],
+         "description": "",
+         "image": "/images/ca1cd722f6c1fcfd450e727c0ac37794.jpeg"
       }
    ],
    "comments": [
