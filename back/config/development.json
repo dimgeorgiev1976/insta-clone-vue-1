@@ -1,5 +1,5 @@
 {
-    "port": "5050",
+    "port": "8080",
     "databast": {
         "login": "root",
         "password": "123"

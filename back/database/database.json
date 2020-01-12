@@ -1,5 +1,5 @@
 {
-   "postIdCounter": 7,
+   "postIdCounter": 9,
    "userIdCounter": 2,
    "commentIdCounter": 8,
    "users": [
@@ -64,6 +64,20 @@
          "tags": [],
          "description": "",
          "image": "/images/ca1cd722f6c1fcfd450e727c0ac37794.jpeg"
+      },
+      {
+         "id": 7,
+         "authorId": 1,
+         "tags": [],
+         "description": "",
+         "image": "/images/d3d829d0c28681d8cca85d8c9896d607.jpg"
+      },
+      {
+         "id": 8,
+         "authorId": 1,
+         "tags": [],
+         "description": "",
+         "image": "/images/22eda5907ce002349d6a19b13010ce63.png"
       }
    ],
    "comments": [
